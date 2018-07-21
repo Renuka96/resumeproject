@@ -1,0 +1,55 @@
+{
+  "details":
+  {
+    "image":"img.jpg",
+    "name":"Renuka",
+    "phoneno":"8297020361",
+    "email":"renukamadeti@gmail.com",
+    "address":"srkr engg college,Bhimavaram"
+  },
+  "carrer":{
+    "info":"To work in an environment that challenges me to improve and constantly thrive for perfection in all the tasks allotted to me"
+  },
+"education":[{
+      "degree":"Btech",
+      "institute":"srkr",
+      "date":["20-07-2020","91%"]
+    },
+    {
+      "degree":"intermidiate",
+      "institute":"aditya",
+      "date":["2016","98%"]
+    },
+    {
+    "degree":"ssc",
+    "institute":"sri vidya nikethan",
+    "date":["12-07-2014","93%"]
+  }
+],
+"keyskills":[
+   {
+     "title":"programming languages",
+     "info":["c,c++,java,python"]
+   },
+   {
+     "title":"operating systems",
+     "info":["windows,ios,linux"]
+    },
+    {
+      "title":"databases",
+      "info":["oracle,sql"]
+    }
+  ],
+  "achievements":[
+    {
+          "college":"SRkR",
+          "event":"ppt",
+          "prize":"medal"
+        },
+        {
+          "college":"vishnu",
+          "event":"paper presentation",
+          "prize":"certificate"
+          }
+       ]
+    }   
