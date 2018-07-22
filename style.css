@@ -2,12 +2,13 @@
    border:2px solid red;
  }
  .parent{
+    background-color:gray;
    display: flex;
    flex-direction: row;
    justify-content:space-between;
  }
   .child1{
-
+  background-color:gray;
   border:3px solid green;
   margin:3%;
   width:50%;
@@ -16,7 +17,7 @@
 
 }
 .child2{
-
+background-color:gray;
   border:3px solid blue;
   margin:3%;
   width:50%;
