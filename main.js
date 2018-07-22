@@ -1,22 +1,47 @@
-function loadjson(file,callback) {
-  var x= new  XMLHttpRequest();
-  x.overrideMimeType("application/json");
-  x.open("GET",file,true);
-  x.onreadystatechange=function(){
-  if(x.readyState === 4 && x.status=="200"){
-    callback(x.responseText);
+// function loadjson(file,callback) {
+//   var x= new  XMLHttpRequest();
+//   x.overrideMimeType("application/json");
+//   x.open("GET",file,true);
+//   x.onreadystatechange=function(){
+//   if(x.readyState === 4 && x.status=="200"){
+//     callback(x.responseText);
+//   }
+// };
+// x.send(null);
+// }
+// loadjson("data.json", function(text){
+//   var data=JSON.parse(text);
+//   console.log(data);
+//   basics(data.details);
+//   basics1(data.carrer);
+//   education(data.education);
+//   keyskills(data.keyskills);
+// basics4(data.achievements);
+// })
+function loadjson(file)
+{
+  return new Promise((resolve,reject)=>{
+    return fetch(file).then(response=>{
+      if(response.ok)
+      {
+        resolve(response.json());
+      }
+      else
+        {
+          reject(new Error('Error'));
+        }
+      })
+    })
   }
-};
-x.send(null);
-}
-loadjson("data.json", function(text){
-  var data=JSON.parse(text);
+
+var file=loadjson("data.json");
+file.then(data=>{
   console.log(data);
   basics(data.details);
   basics1(data.carrer);
   education(data.education);
   keyskills(data.keyskills);
-basics4(data.achievements);
+  basics4(data.achievements);
 })
 var child1=document.querySelector(".child1");
 
@@ -116,7 +141,6 @@ child2.appendChild(skilltable);
   }
   skilltable.innerHTML=tabledata;
 }
-
 function basics4(achi)
 {
   var ac=document.createElement("h2");
@@ -143,4 +167,8 @@ function basics4(achi)
  child2.appendChild(ul);
 
   }
+}
+function myfun()
+{
+  window.open("resume.html","_self",true);
 }
